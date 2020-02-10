@@ -5,5 +5,12 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: "Bookmarked",
+    description: "Um blog com minha seleção de artigos preferidos.",
+    author: "J.A. Gaeta Mendes",
+    twitterUsername: "@JaGaeta",
+    image: "/siteImage.jpeg",
+    siteUrl: "https://my-blog-project.netlify.com",
+  },
 }

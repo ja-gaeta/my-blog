@@ -1,8 +1,10 @@
 import React from "react"
 import Layout from "../components/Layout"
+import SEO from "../components/SEO"
 
 export default () => (
-  <div>
-    <Layout>Página Inicial</Layout>
-  </div>
+  <Layout>
+    <SEO title="Início" />
+    Página Inicial
+  </Layout>
 )
