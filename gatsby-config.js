@@ -1,8 +1,4 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
+const path = require(`path`)
 
 module.exports = {
   siteMetadata: {
@@ -13,4 +9,15 @@ module.exports = {
     image: "/siteImage.jpeg",
     siteUrl: "https://my-blog-project.netlify.com",
   },
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
+      },
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+  ],
 }
