@@ -1,9 +1,23 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
+const path = require(`path`)
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: "Bookmarked",
+    description: "Um blog com minha seleção de artigos preferidos.",
+    author: "J.A. Gaeta Mendes",
+    twitterUsername: "@JaGaeta",
+    image: "/siteImage.jpeg",
+    siteUrl: "https://my-blog-project.netlify.com",
+  },
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
+      },
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+  ],
 }
